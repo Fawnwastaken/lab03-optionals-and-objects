@@ -11,7 +11,7 @@ import Foundation
 /**
  Represents a number as a fraction
  */
-class Fraction {
+class Fraction : CustomStringConvertible{
     
     //STORED PROPERTIES
     
