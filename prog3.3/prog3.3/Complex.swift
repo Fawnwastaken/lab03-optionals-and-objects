@@ -36,7 +36,7 @@ class Complex : CustomStringConvertible {
         if imag < 0{
             op = ""
         }
-        return "\(self.real) \(op) \(self.imag)"
+        return "\(self.real) \(op) \(self.imag)i"
     }
     
     // INITIALISERS
@@ -99,7 +99,7 @@ class Complex : CustomStringConvertible {
      - returns: The result of c1*c2.
      */
     static func multiply(c1: Complex, by c2: Complex) -> Complex {
-        return Complex(real: c1.real*c2.real - c1.imag*c2.imag, imag: c1.real*c2.real + c1.imag*c2.imag)
+        return Complex(real: c1.real*c2.real - c1.imag*c2.imag, imag: c1.real*c2.imag + c1.imag*c2.real)
     }
     
     /**
@@ -111,7 +111,7 @@ class Complex : CustomStringConvertible {
      - returns: The result of c1/c2.
      */
     static func divide(c1: Complex, by c2: Complex) -> Complex {
-        return Complex(real: (c1.real*c2.real + c1.imag*c2.imag)/c2.magnitude, imag: (c1.real*c2.real - c1.imag*c2.imag)/c2.magnitude)
+        return Complex(real: (c1.real*c2.real + c1.imag*c2.imag)/c2.magnitude, imag: (c1.imag*c2.real - c1.real*c2.imag)/c2.magnitude)
     }
 }
 
