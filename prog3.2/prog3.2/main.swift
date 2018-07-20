@@ -13,8 +13,8 @@ var x: Int?
 x = nil
 print ("x =\(x as Int?)")
 
-if x == nil {
-    print("x has no value")
+if let xunwrapped = x {
+    print("x has a value of \(xunwrapped)")
 } else {
     print("x has a value of \(x!)")
 }
@@ -34,9 +34,9 @@ z = Fraction(num:1, den:3)
 
 print("z=\(z as Fraction?)")
 
-if z != nil{
-    print ("z has a value of \(z!)")
-    print("The decimal property of z's value is \(z!.decimal)")
+if let zu = z {
+    print("z has a value of \(zu)")
+    print("The decimal property of z's value is \(zu.decimal)")
 } else {
     print("z has no value")
 }
