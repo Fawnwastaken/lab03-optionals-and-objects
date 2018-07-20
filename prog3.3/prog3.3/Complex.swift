@@ -36,7 +36,7 @@ class Complex : CustomStringConvertible {
         if imag < 0{
             op = ""
         }
-        return "\(self.real) \(op) \(self.imag)i"
+        return "\(self.real)\(op)\(self.imag)i"
     }
     
     // INITIALISERS
@@ -112,6 +112,15 @@ class Complex : CustomStringConvertible {
      */
     static func divide(c1: Complex, by c2: Complex) -> Complex {
         return Complex(real: (c1.real*c2.real + c1.imag*c2.imag)/c2.magnitude, imag: (c1.imag*c2.real - c1.real*c2.imag)/c2.magnitude)
+    }
+    
+    /**
+    Copy the current complex number
+ 
+     - returns: A copy of this complex number
+     */
+    func copy() -> Complex{
+        return Complex(real: self.real, imag: self.imag)
     }
 }
 
